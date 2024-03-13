@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDL</title>
+    <link rel="icon" type="image/png" href="https://cdn130.picsart.com/282489794047211.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .content-item button {
+            margin-left: 10px;
+        }
+
+        #todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #todo-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #todo-list li input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #clear-all {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TO-DO LIST</h1>
+    </header>
+
+    <section>
+        <h2>Список дел</h2>
+
+        <div class="content-item">
+            <input type="text" id="new-item" placeholder="Новый элемент списка">
+            <button onclick="addItem()">Добавить</button>
+            <button onclick="clearAll()">Очистить всё</button>
+        </div>
+
+        <ul id="todo-list">
+            <li>
+                <input type="checkbox">
+                <span>Сделать что-то</span>
+                <button onclick="clearItem(this)">Очистить</button>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+</body>
+</html>
