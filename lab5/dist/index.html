@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDL</title>
+    <link rel="icon" type="image/png" href="https://cdn130.picsart.com/282489794047211.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TO-DO LIST</h1>
+    </header>
+
+        <section>
+            <h2>Список дел</h2>
+
+	    <div class="content-item">
+            	<input type="text" id="new-item" placeholder="Новый элемент списка">
+            	<button class="add-button" onclick="addItem()">Добавить</button>
+            	<button class="clear-all-button" onclick="clearAll()">Очистить всё</button>
+            </div>
+
+            <dl id="todo-list"></dl>
+            <div class="no-items-message">Не найдено ни одного дела</div>
+
+    	    <div class="filter-links">
+		<a href="#" class="filter-link" data-filter="all" onclick="setFilter('all')">Все (<span id="allCount">0</span>)</a>
+        	<a href="#" class="filter-link" data-filter="completed" onclick="setFilter('completed')">Сделанные (<span id="completedCount">0</span>)</a>
+        	<a href="#" class="filter-link" data-filter="uncompleted" onclick="setFilter('uncompleted')">Не сделанные (<span id="uncompletedCount">0</span>)</a>
+		<select id="sort-select" onchange="sortListByName(this.value)">
+    			<option value="asc">Сортировать от А до Я</option>
+    			<option value="desc">Сортировать от Я до А</option>
+		</select>
+	    </div>
+        </section>
+
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
