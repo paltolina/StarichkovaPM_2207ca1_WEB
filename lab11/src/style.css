@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #006363;
+}
+
+header {
+    background-color: #006363;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: auto; /* Удаляем значение auto из маргина */
+    display: flex; /* Используем flex-контейнер */
+    justify-content: center; /* Выравниваем контент по горизонтали */
+    align-items: center; /* Выравниваем контент по вертикали */
+}
+
+footer {
+    background-color: #006363;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: auto; /* Удаляем значение auto из маргина */
+    display: flex; /* Используем flex-контейнер */
+    justify-content: center; /* Выравниваем контент по горизонтали */
+    align-items: center; /* Выравниваем контент по вертикали */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 800px; /* Ограничим максимальную ширину для удобства чтения */
+    margin: 0 auto; /* Центрируем по горизонтали */
+}
+
+.content-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.content-item:hover {
+    background-color: #f2f2f2;
+}
+
+.content-item button {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.add-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #cccccc; /* Серый цвет для кнопки "Добавить" */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clear-all-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #bf433a; /* Красный цвет для кнопки "Очистить все" */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #b3b3b3; /* Изменение цвета при наведении для кнопки "Добавить" */
+}
+
+.clear-all-button:hover {
+    background-color: #a83328; /* Изменение цвета при наведении для кнопки "Очистить все" */
+}
+
+
+dt {
+    background: фон;
+    color: цвет_текста;
+}
+
+dt:nth-child(2n) {
+    background: фон_четных;
+    color: цвет_текста_четных;
+}
+
+dt:hover {
+    background: фон_при_наведении;
+    color: цвет_текста_при_наведении;
+}
+
+@media screen and (max-width: 500px) {
+    .content-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-item button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+
+.no-items-message {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    margin: auto; /* Удаляем значение auto из маргина */
+    display: none; /* Начально скрываем сообщение */
+    justify-content: center; /* Выравниваем контент по горизонтали */
+    align-items: center; /* Выравниваем контент по вертикали */
+}
+
+.filter-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.filter-link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    transition: font-weight 0.3s ease; /* Добавляем плавный переход для изменения толщины шрифта */
+}
+
+.filter-link:hover {
+    text-decoration: underline; /* Подчеркиваем ссылку при наведении */
+}
